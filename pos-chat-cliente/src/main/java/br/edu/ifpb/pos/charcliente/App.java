@@ -26,7 +26,8 @@ public class App {
         String nickName = scanner.nextLine();
 
         try {
-            Sever servidor = (Sever) Naming.lookup("//localhost:1099/Sever");
+//            Sever servidor = (Sever) Naming.lookup("//localhost:1099/Sever");
+            Sever servidor = (Sever) Naming.lookup("//host-rmi:1099/Sever");
             Client client = new ClientImpl(nickName);
 
             String retorno = servidor.inscrever(client);
