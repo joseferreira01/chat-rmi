@@ -43,7 +43,7 @@ public class App {
             }
 
             String msg;
-System.err.println("Pode escrever");
+System.err.println("Pode escrever! :)");
             while (true) {
                 
                 msg = scanner.nextLine();
