@@ -1,4 +1,4 @@
-package br.edu.ifpb.pos.charcliente;
+package br.edu.ifpb.pos.man;
 
 import br.edu.ifpb.pos.chat.shared.Client;
 import java.rmi.RemoteException;

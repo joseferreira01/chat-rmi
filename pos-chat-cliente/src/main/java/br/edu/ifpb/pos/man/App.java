@@ -1,4 +1,4 @@
-package br.edu.ifpb.pos.charcliente;
+package br.edu.ifpb.pos.man;
 
 import br.edu.ifpb.pos.chat.shared.Client;
 import br.edu.ifpb.pos.chat.shared.Sever;
@@ -26,8 +26,8 @@ public class App {
         String nickName = scanner.nextLine();
 
         try {
-//            Sever servidor = (Sever) Naming.lookup("//localhost:1099/Sever");
-            Sever servidor = (Sever) Naming.lookup("//host-rmi:1099/Sever");
+            Sever servidor = (Sever) Naming.lookup("//localhost:1099/Sever");
+//            Sever servidor = (Sever) Naming.lookup("//host-rmi:1099/Sever");
             Client client = new ClientImpl(nickName);
 
             String retorno = servidor.inscrever(client);
@@ -43,8 +43,9 @@ public class App {
             }
 
             String msg;
-
+System.err.println("Pode escrever");
             while (true) {
+                
                 msg = scanner.nextLine();
                 servidor.comentar(nickName, msg);
                 if (msg.equals("sair")) {

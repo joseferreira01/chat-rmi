@@ -6,6 +6,7 @@
     <version>1.0</version>
     <packaging>jar</packaging>
     <properties>
+        
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
@@ -13,12 +14,30 @@
     <name>pos-chat-cliente</name>
     <dependencies>
         <dependency>
+          
             <groupId>${project.groupId}</groupId>
             <artifactId>pos-chat-shared</artifactId>
             <version>${project.version}</version>
         </dependency>
     </dependencies>
     <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <version>2.4</version>
+                <configuration>
+                    <archive>
+                        <manifest>
+                            <addClasspath>true</addClasspath>
+                            <mainClass>br.edu.ifpb.pos.man.App</mainClass>
+                        </manifest>
+                    </archive>
+                </configuration>
+            </plugin>
+        </plugins>
+         
         <finalName>chat-cliente</finalName>
     </build>
+    
 </project>

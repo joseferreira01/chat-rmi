@@ -24,8 +24,8 @@ public class ManSever {
         try {
             sever = new SeverImpl();
             LocateRegistry.createRegistry(1099);
-//            Naming.rebind("//localhost:1099/Sever", sever);
-            Naming.rebind("//host-rmi:1099/Sever", sever);
+            Naming.rebind("//localhost:1099/Sever", sever);
+//            Naming.rebind("//host-rmi:1099/Sever", sever);
             System.out.println("serviço ativo.");
         } catch (RemoteException | MalformedURLException ex) {
             Logger.getLogger(ManSever.class.getName()).log(Level.SEVERE, null, ex);
